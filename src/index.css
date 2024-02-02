@@ -17,6 +17,10 @@ main {
   margin: -5px 10px 5px;
 }
 
+strong {
+  color: red;
+}
+
 input {
   background-color: rgba(0, 0, 0, 0.09);
   border: none;

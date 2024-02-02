@@ -2,14 +2,19 @@ body {
   font-family: roboto, sans-serif;
 }
 
+form {
+  padding-top: 10px;
+  height: 23px;
+  padding-bottom: 10px;
+}
+
 hr {
-  margin: 20px -10px;
+  margin: 15px -10px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-form {
-  padding-top: 10px;
-  height: 20px;
+main {
+  margin: -5px 10px 5px;
 }
 
 input {
@@ -19,12 +24,31 @@ input {
   padding: 5px 10px;
 }
 
+a {
+  color: aqua;
+  text-decoration: none;
+  transition: 150ms all ease-in-out;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 input.input-city-box {
   font-size: 15px;
   width: 80%;
 }
 
 input.submit-button {
+  margin-left: 7px;
   border: 3px solid aqua;
   color: black;
   background-color: aqua;
@@ -44,13 +68,35 @@ input.submit-button:active {
 
 div.container {
   border-radius: 20px;
-  margin: 30px auto;
+  margin: 60px auto;
   max-width: 700px;
   padding: 10px;
   border: 2px solid black;
 }
 
-/*div.weather-info-container {
+div.weather-info-container {
   display: flex;
   justify-content: space-between;
-} */
+}
+
+.temperature-info {
+  position: relative;
+  bottom: 10px;
+  margin: 50px 15px 0px 0px;
+}
+
+.temp {
+  font-size: 60px;
+}
+
+.temp-metric {
+  right: 10px;
+  position: relative;
+  bottom: 20px;
+  font-size: 20px;
+}
+
+.weather-emoji {
+  font-size: 40px;
+  margin-right: 10px;
+}

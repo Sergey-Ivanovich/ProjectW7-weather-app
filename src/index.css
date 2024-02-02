@@ -3,9 +3,9 @@ body {
 }
 
 form {
-  padding-top: 10px;
   height: 23px;
-  padding-bottom: 10px;
+
+  padding: 10px 20px;
 }
 
 hr {
@@ -48,7 +48,7 @@ footer {
 
 input.input-city-box {
   font-size: 15px;
-  width: 80%;
+  width: 78%;
 }
 
 input.submit-button {
@@ -103,4 +103,9 @@ div.weather-info-container {
 .weather-emoji {
   font-size: 40px;
   margin-right: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
 }

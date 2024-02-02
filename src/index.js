@@ -2,7 +2,9 @@ function weatherRefresh(response) {
   let tempElement = document.querySelector("#shownTemp");
   let cityNameElement = document.querySelector("h1");
   let currentTemp = Math.round(response.data.temperature.current);
+  let conditionElement = document.querySelector("#shown-condition	");
 
+  conditionElement.innerHTML = response.data.condition.description;
   cityNameElement.innerHTML = response.data.city;
   tempElement.innerHTML = `${currentTemp} `;
 }
@@ -23,3 +25,5 @@ function cityHandle(event) {
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", cityHandle);
+
+apiSearch(`Moscow`);

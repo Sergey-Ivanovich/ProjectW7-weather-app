@@ -85,7 +85,7 @@ div.weather-info-container {
 
 .temperature-info {
   position: relative;
-  bottom: 10px;
+  bottom: 50px;
   margin: 50px 15px 0px 0px;
 }
 
@@ -101,8 +101,8 @@ div.weather-info-container {
 }
 
 .weather-emoji {
-  font-size: 40px;
-  margin-right: 10px;
+  position: relative;
+  top: 30px;
 }
 
 .form-container {

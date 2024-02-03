@@ -6,9 +6,15 @@ function weatherRefresh(response) {
   let timeShown = document.querySelector("#time-shown");
   let currentTime = response.data.time;
   let date = new Date(response.data.time * 1000);
+  let shownHumidity = document.querySelector("#shown-humidity");
+  let shownWindSpeed = document.querySelector("#shown-windspeed");
+  let shownIcon = document.querySelector("#weather-icon");
+  let icon_url = response.data.condition.icon_url;
 
-  currentTime.innerHTML = formatDate(date);
-
+  shownIcon.innerHTML = `<img src="${icon_url}" />`;
+  shownWindSpeed.innerHTML = `${response.data.wind.speed}Km/h`;
+  timeShown.innerHTML = formatDate(date);
+  shownHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   conditionElement.innerHTML = response.data.condition.description;
   cityNameElement.innerHTML = response.data.city;
   tempElement.innerHTML = `${currentTemp} `;
@@ -29,6 +35,12 @@ function formatDate(date) {
   ];
 
   let day = weekDays[date.getDay()];
+
+  if (min < 10) {
+    min = `0${min}`;
+  }
+
+  return `${day} ${hour}:${min}`;
 }
 
 function apiSearch(city) {

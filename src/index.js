@@ -3,10 +3,32 @@ function weatherRefresh(response) {
   let cityNameElement = document.querySelector("h1");
   let currentTemp = Math.round(response.data.temperature.current);
   let conditionElement = document.querySelector("#shown-condition	");
+  let timeShown = document.querySelector("#time-shown");
+  let currentTime = response.data.time;
+  let date = new Date(response.data.time * 1000);
+
+  currentTime.innerHTML = formatDate(date);
 
   conditionElement.innerHTML = response.data.condition.description;
   cityNameElement.innerHTML = response.data.city;
   tempElement.innerHTML = `${currentTemp} `;
+}
+
+function formatDate(date) {
+  let min = date.getMinutes();
+  let hour = date.getHours();
+
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = weekDays[date.getDay()];
 }
 
 function apiSearch(city) {
